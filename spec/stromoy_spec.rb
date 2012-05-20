@@ -1,4 +1,5 @@
 module Stromoy
+  # Normalize a 
   def self.normalize(seq)
     seq.bytes.collect do|c|
       c - 'a'.bytes.first

@@ -14,4 +14,6 @@ Gem::Specification.new do |gem|
   gem.name          = "stromoy"
   gem.require_paths = ["lib"]
   gem.version       = Stromoy::VERSION
+  
+  gem.add_development_dependency 'rspec'
 end
