@@ -16,4 +16,6 @@ Gem::Specification.new do |gem|
   gem.version       = Stromoy::VERSION
   
   gem.add_development_dependency 'rspec'
+  gem.add_development_dependency 'cucumber'
+  gem.add_development_dependency 'aruba'
 end
