@@ -6,4 +6,7 @@ Feature: relative searching
       ABC
       """
     When I run `stromoy -f binary.bin -s "ABC"`
-    Then the output should contain "65 66 67"
+    Then the output should contain:
+       """
+       65 66 67 .. .. .. .. ..  A B C . . . . .
+       """

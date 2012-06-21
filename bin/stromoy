@@ -8,4 +8,17 @@ opts = Slop.parse do
   on :s, :string=, "Search string"
 end
 
-open(opts[:f]).each_byte { |b| print "#{b} "}
+b = open(opts[:f]).bytes.to_a
+s = opts[:s].chars.to_a
+
+8.times do
+  print "#{b.shift|| '..'} "
+end
+
+print " "
+
+8.times do
+  print "#{s.shift|| '.'} "
+end
+
+exit 0
