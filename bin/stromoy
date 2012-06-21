@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require 'slop'
+
+opts = Slop.parse do
+  banner "stromoy [options]\n"
+  on :f, :file=, "File"
+  on :s, :string=, "Search string"
+end
+
+open(opts[:f]).each_byte { |b| print "#{b} "}
