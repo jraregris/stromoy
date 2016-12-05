@@ -1,0 +1,6 @@
+[package]
+name = "relativesearch"
+version = "0.1.0"
+authors = ["jraregris <oddmund@oddmundo.com>"]
+
+[dependencies]
