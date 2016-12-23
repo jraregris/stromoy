@@ -20,7 +20,7 @@ fn main() {
         .collect::<Vec<_>>();
 
     for i in 0..haystack.len() - needle.len() {
-        let straw = &haystack[i..i+needle.len()];
+        let straw = &haystack[i..i + needle.len()];
         let strawn = normalize(straw);
         if strawn == needle {
             println!("FOUND! {:?} -> {}", straw, String::from_utf8_lossy(straw));
@@ -28,7 +28,7 @@ fn main() {
     }
 }
 
-fn normalize(input : &[u8]) -> Vec<i16> {
+fn normalize(input: &[u8]) -> Vec<i16> {
     let null = input[0] as i16;
     input.iter()
         .map(|i| (*i as i16) - null)
